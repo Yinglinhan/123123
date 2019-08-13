@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Frame, useCycle } from "framer";
 import "./styles.css";
-//11
+//1111
 function CheckBox() {
 	let [mode, cycle] = useCycle("empty", "checked");
 	return (
