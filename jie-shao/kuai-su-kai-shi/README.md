@@ -15,9 +15,19 @@
 function Card({ title }) { ... }
 ```
 
-- [**JSX**](https://reactjs.org/docs/introducing-jsx.html) ****
+- [**JSX**](https://reactjs.org/docs/introducing-jsx.html) ****一种可以直接JavaScript里使用类HTML的语法，这样你就能用熟悉的方式在JS里面搭建文档结构
 
-\*\*\*\*
+```jsx
+// JSX markup
+<Card title="Hello">World</Card>
+```
 
-- [**TypeScript**](https://www.typescriptlang.org/)  
+- [**TypeScript**](https://www.typescriptlang.org/)  一种可选的针对ES6语言的扩展语法，能给JS添加类型检查功能，从而让编辑器可以更好地理解你的写的代码，从而实现更好的代码自动补全和提示。
+
+```typescript
+// TypeScript string property type
+type CardProps = { title: string }
+```
+
+
 

@@ -6,4 +6,7 @@
 
 * [介绍](jie-shao/kuai-su-kai-shi/README.md)
   * [快速开始](jie-shao/kuai-su-kai-shi/kuai-su-kai-shi.md)
+  * [基础](jie-shao/kuai-su-kai-shi/ji-chu.md)
+* [教程](jie-shao/jiao-cheng/README.md)
+  * [安装 Setup](jie-shao/jiao-cheng/an-zhuang-setup.md)
 
