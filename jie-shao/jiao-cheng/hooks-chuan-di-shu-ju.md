@@ -102,21 +102,110 @@ export function App() {
 
 
 
+### 使用Slider组件的属性
+
+为了让你能够使用在App组件中通过Sldier组件标签传递的数据，你需要在Slider组件内部添加一些内容。
+
+ - 打开Slider.tsx 文件
+
+ - 在顶部Slider函数中添加一个有属性的对象作为它的参数，利用对象的解构赋值
+
+ - 修改一下position这个变量的值，用上value这个变量
+
+给作为参数的对象的几个属性设置默认值，value设置为0，min也为0，max为1。这样设置是为了当这个组件没有被正确地传入数据时，滑块会获取value为0的值，默认出现在轨道的最左侧的位置，当滑块被拖到左右侧的时候，value的值就相应地变成最大值1。
+
+对象中的onChange属性没有一个默认值。在使用前你需要确认是否有相应的函数被传递进来，以防止不必要的调用和错误。
+
+现在你已经有了一个默认的value值，用它先把useMotionValue的初始值变更一下，然后用position这个比那辆来设置一下滑块和进度条。这里就是用Slider组件的宽度乘以value的值。
+
+所有的错误都消失了！wow！在接下来的几步，你就会用到传进来的onChange属性来修改scale的数据。
+
+```jsx
+export function Slider({
+  min = 0,
+  max = 1,
+  value = 0,
+  onChange
+}) {
+  const position = useMotionValue(value * 130);
+  return (
+    <Frame
+      name={"Rail"}
+      ...
+    >
+      <Frame
+        name={"Fill"}
+        ...
+      />
+      <Frame
+        name={"Knob"}
+        ...
+      />
+    </Frame>
+  );
+}
+```
 
 
 
+### 引入useTransform这个功能模块
+
+在使用onChange属性中的函数来更新Sldier组件之前，需要去引入一个工具用来转换MotionValue生成的保存在变量position里面的值，让它能够在min和max之间的范围内变化。
+
+ - 在Slider.tsx文件中import语句中添加useTransform
+
+现在你已经引入了useTransform功能了，让我们开始把它用起来。
+
+```jsx
+import * as React from "react"
+import { Frame, useMotionValue, useTransform } from "framer"
+```
 
 
 
+### Transform & 更新数据
 
+先创建一个变量newValue来储存你转换过的数据。使用useTranform功能时，你需要把position这个变量穿进去，它里面其实放的是MotionValu功能产生的值，然后要定义两个数组，一个是输入数据的范围，一个是输出数据的范围。
 
+输入的范围数组用\[0,130\]表示你整个滑块的限制滑动的区间。输出范围数组用的是min和max，表示会输出一个值在min和max之间，输入和输出是一一映射的。
 
+当你使用了useTransform这个方法之后，你其实就是订阅了MotionValue产生的数据，当position里面的值发生变化时，就会产生一个在min和max范围内的值返回到newValue变量中。
 
+为了能够及时地把新产生的newValue传递给图像的Frame标签，要用利用滑块标签上的onDrag事件。onDrag属性每当你拖动滑块时，会触发作为其属性的一系列代码，要记得检查下在代码中用if语句检查下onChange这个变量是否有值，只有当onChange有值时，才会往下执行，这样能帮你避免很多不必要的错误。
 
+你现在能够放心地执行onChange函数了，同时用newValue.ger\(\)给它传一个值。因为newValue是现在保存的是一个特殊的对象，你需要使用get方法才能获取当前的数据。接着，通过一系列传递，就会把取到的这个值传给setScale方法，也就是在index.tsx文件中用来控制图像Frame标签缩放变量scale的方法，这个方法就是在index.tsx文件中用onChange属性传递到Slider标签的组件中的。
 
+看!你拖动滑块的时候，图片的缩放会跟着变化了！
 
-
-
+```jsx
+export function Slider({
+  min = 0,
+  max = 1,
+  value = 0,
+  onChange
+}) {
+  const position = useMotionValue(value * 130);
+  const newValue = useTransform(position,[0,130],[min,max]);
+  return (
+    <Frame
+      name={"Rail"}
+      ...
+    >
+      <Frame
+        name={"Fill"}
+        ...
+      />
+      <Frame
+        name={"Knob"}
+        ...
+        onDrag={function() {
+          if (onChange) onChange(newValue.get());
+        }}
+      />
+   </Frame>
+  );
+}
+```
 
 
 
