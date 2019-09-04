@@ -21,5 +21,8 @@
   * [Animate](jie-shao/jian-yao-an-li/animate.md)
   * [Gestures](jie-shao/jian-yao-an-li/gestures.md)
   * [Dragging 拖拽](jie-shao/jian-yao-an-li/dragging-tuo-ye.md)
-* [Untitled](jie-shao/untitled.md)
+  * [Scrolling 滚动](jie-shao/jian-yao-an-li/untitled.md)
+  * [Paging 翻页](jie-shao/jian-yao-an-li/paging-fan-ye.md)
+  * [Tranforms 变换](jie-shao/jian-yao-an-li/tranforms-bian-huan.md)
+  * [Variants 变量组](jie-shao/jian-yao-an-li/variants-bian-liang-zu.md)
 
