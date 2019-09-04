@@ -30,4 +30,18 @@
 
 * [Frame](library-ku/frame/README.md)
   * [Layout](library-ku/frame/layout.md)
+* [Animation](library-ku/animation.md)
+* [Color](library-ku/color.md)
+* [Page](library-ku/page.md)
+* [Scroll](library-ku/scroll.md)
+* [Stack](library-ku/stack.md)
+* [Utilities](library-ku/utilities.md)
+
+## FRAMER X
+
+* [Assets](framer-x/assets.md)
+* [Data & Overrides](framer-x/data-and-overrides.md)
+* [CanvasComponents](framer-x/canvascomponents.md)
+* [PropertyControls](framer-x/propertycontrols.md)
+* [RenderTarget](framer-x/rendertarget.md)
 
