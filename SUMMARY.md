@@ -20,4 +20,6 @@
   * [Stack](jie-shao/jian-yao-an-li/stack.md)
   * [Animate](jie-shao/jian-yao-an-li/animate.md)
   * [Gestures](jie-shao/jian-yao-an-li/gestures.md)
+  * [Dragging 拖拽](jie-shao/jian-yao-an-li/dragging-tuo-ye.md)
+* [Untitled](jie-shao/untitled.md)
 
