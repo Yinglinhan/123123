@@ -29,7 +29,7 @@
 ## LIBRARY 库
 
 * [Frame](library-ku/frame/README.md)
-  * [Layout](library-ku/frame/layout.md)
+  * [Layout 布局](library-ku/frame/layout.md)
   * [Pan](library-ku/frame/pan.md)
 * [Animation](library-ku/animation.md)
 * [Color](library-ku/color.md)
