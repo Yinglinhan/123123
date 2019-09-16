@@ -32,7 +32,7 @@
   * [Layout 布局](library-ku/frame/layout.md)
   * [Visual 视觉](library-ku/frame/visual-shi-jue.md)
   * [Transform 变换](library-ku/frame/transform.md)
-  * [Animation](library-ku/frame/animation.md)
+  * [Animation 动画](library-ku/frame/animation.md)
   * [Transition](library-ku/frame/transition.md)
   * [Variants](library-ku/frame/variants.md)
   * [Tap](library-ku/frame/tap.md)
