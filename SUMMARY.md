@@ -33,7 +33,7 @@
   * [Visual 视觉](library-ku/frame/visual-shi-jue.md)
   * [Transform 变换](library-ku/frame/transform.md)
   * [Animation 动画](library-ku/frame/animation.md)
-  * [Transition](library-ku/frame/transition.md)
+  * [Transition 过渡](library-ku/frame/transition.md)
   * [Variants](library-ku/frame/variants.md)
   * [Tap](library-ku/frame/tap.md)
   * [Hover](library-ku/frame/hover.md)
