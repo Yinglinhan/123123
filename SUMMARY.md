@@ -24,7 +24,7 @@
   * [Scrolling 滚动](jie-shao/jian-yao-an-li/untitled.md)
   * [Paging 翻页](jie-shao/jian-yao-an-li/paging-fan-ye.md)
   * [Tranforms 变换](jie-shao/jian-yao-an-li/tranforms-bian-huan.md)
-  * [Variants 变量组](jie-shao/jian-yao-an-li/variants-bian-liang-zu.md)
+  * [Variants 动画状态组](jie-shao/jian-yao-an-li/variants-bian-liang-zu.md)
 
 ## LIBRARY 库
 
@@ -34,8 +34,8 @@
   * [Transform 变换](library-ku/frame/transform.md)
   * [Animation 动画](library-ku/frame/animation.md)
   * [Transition 过渡](library-ku/frame/transition.md)
-  * [Variants](library-ku/frame/variants.md)
-  * [Tap](library-ku/frame/tap.md)
+  * [Variants 动画状态组](library-ku/frame/variants.md)
+  * [Tap 点击](library-ku/frame/tap.md)
   * [Hover](library-ku/frame/hover.md)
   * [Pan](library-ku/frame/pan.md)
   * [Drag](library-ku/frame/drag.md)

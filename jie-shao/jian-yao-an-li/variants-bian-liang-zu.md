@@ -1,4 +1,4 @@
-# Variants 变量组
+# Variants 动画状态组
 
 Variants是一系列数据的集合，比如状态，你可以通过animate或者cycle让标签在多个状态之间切换。举个例子，比如一般来说按钮都会有一个鼠标悬浮停留时的状态和一个自己默认的状态。当有鼠标悬浮时，可能它的背景色background和投影boxshadow就会变了。这些属性就可以定义在Variants中。
 
