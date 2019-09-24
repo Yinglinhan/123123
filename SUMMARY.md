@@ -36,7 +36,7 @@
   * [Transition 过渡](library-ku/frame/transition.md)
   * [Variants 动画状态组](library-ku/frame/variants.md)
   * [Tap 点击](library-ku/frame/tap.md)
-  * [Hover](library-ku/frame/hover.md)
+  * [Hover 悬浮](library-ku/frame/hover.md)
   * [Pan](library-ku/frame/pan.md)
   * [Drag](library-ku/frame/drag.md)
   * [Types](library-ku/frame/types.md)
