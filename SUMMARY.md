@@ -45,7 +45,7 @@
   * [Animation controls](library-ku/animation/animation-controls.md)
   * [Tween](library-ku/animation/tween.md)
   * [Spring](library-ku/animation/spring.md)
-  * [Inertia](library-ku/animation/inertia.md)
+  * [Inertia 惯性](library-ku/animation/inertia.md)
   * [Orchestration](library-ku/animation/orchestration.md)
   * [Types](library-ku/animation/types.md)
 * [Color](library-ku/color/README.md)
