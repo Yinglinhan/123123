@@ -132,9 +132,112 @@ x.set(10)
 
 停止现在正在进行的动画
 
+## AnimationControls
+
+同时控制一个或者多个动画
 
 
 
+**set\(definition\):** void
+
+直接给控制器设置动画参数或者variants变量对象中的一个属性
+
+```jsx
+// With properties
+controls.set({ opacity: 0 })
+
+// With variants
+controls.set("hidden")
+```
+
+| definition: VariantLabels \| TargetAndTransition |
+| :--- |
+
+
+
+
+**start\(definition, transitionOverride\):** Promise&lt;any&gt;
+
+启动动画，会同时在所有的关联组件上启动
+
+```jsx
+controls.start("variantLabel")
+controls.start({
+  x: 0,
+  transition: { duration: 1 }
+})
+```
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">
+        <p>definition:AnimationDefinition</p>
+        <p>&#x7528;&#x6765;&#x5B9E;&#x73B0;&#x52A8;&#x753B;&#x7684;&#x52A8;&#x753B;&#x53C2;&#x6570;&#x6216;&#x8005;variants&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x540D;&#x79F0;</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p><b>transitionOverride:</b>Transition</p>
+        <p>&#x53EF;&#x9009;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x4F60;&#x81EA;&#x5DF1;&#x60F3;&#x8981;&#x7684;&#x8FC7;&#x6E21;&#x53C2;&#x6570;</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>returns:</b> Promise&lt;any&gt;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">- &#x5F53;&#x6240;&#x6709;&#x52A8;&#x753B;&#x90FD;&#x6267;&#x884C;&#x5B8C;&#x6210;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;Promise&#x5BF9;&#x8C61;&#x4F1A;resolve</td>
+    </tr>
+  </tbody>
+</table>
+
+**stop\( \):** void
+
+停止所有通过控制器绑定的组件的动画
+
+```jsx
+controls.stop()
+```
+
+
+
+**EasingFunction**
+
+一个函数接收一个名称为progress的参数，这个参数值的在0-1范围内，并且返回一个也是0-1范围的值
+
+```jsx
+const transition = {
+  ease: progress => progress * progress
+}
+
+<Frame
+  animate={{ opacity: 0 }}
+  transition={transition}
+/>
+```
+
+
+
+**TargetAndTransition**
+
+一个对象，里面设置了动画的参数。每一个属性可以是单独的一个值，或者一个包含各种值的数组。
+
+它也有可能包含以下属性：
+
+ - transition：特殊的动画过渡参数，专门用来给某一个或者所有动画效果设置
+
+ - transitionEnd: 当动画完成后对组件设置的属性和值
+
+```jsx
+const target = {
+  x: "0%",
+  opacity: 0,
+  transition: { duration: 1 },
+  transitionEnd: { display: "none" }
+}
+```
 
 
 
