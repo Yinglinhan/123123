@@ -145,6 +145,97 @@ Color.**difference**\(colorA, colorB\): number
 
 
 
+Color.**grayscale**\(color\): Color
+
+返回一个完全无饱和度的颜色
+
+```jsx
+const blue = Color("#0099FF")
+const gray = Color.grayscale(blue)
+```
+
+| color: Color |
+| :--- |
+| **returns:** number |
+
+
+
+Color.**hueRotate**\(color, angle\): Color
+
+返回一个调整了色相角度的颜色
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">
+        <p>color: Color</p>
+        <p>&#x9700;&#x8981;&#x8C03;&#x6574;&#x8272;&#x76F8;&#x7684;&#x989C;&#x8272;</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>angle:</b> number</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">&#x8272;&#x76F8;&#x8C03;&#x6574;&#x7684;&#x89D2;&#x5EA6;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>returns:</b> number</td>
+    </tr>
+  </tbody>
+</table>
+
+Color.**interpolate**\(colorA, colorB, model\)
+
+返回一个函数，可以实现输出的颜色在两种颜色之间混合及切换，默认使用的RGB的颜色模式对象，在实现某些颜色变化时非常有效。
+
+```jsx
+const blend = Color.interpolate(Color("red"), Color("blue"))
+
+blend(0)   // Initial state (red)
+blend(0.5) // Mid state (purple)
+blend(1)   /
+```
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">
+        <p>colorA: Color</p>
+        <p>&#x5F00;&#x59CB;&#x7684;&#x989C;&#x8272;</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p><b>colorB:</b> Color</p>
+        <p>&#x7ED3;&#x675F;&#x989C;&#x8272;</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p>model: ColorMixModelType</p>
+        <p>&#x989C;&#x8272;&#x6A21;&#x5F0F;&#x5BF9;&#x8C61;&#xFF0C;ColorMixModelType&#x4E2D;&#x7684;&#x5176;&#x4E2D;&#x4E00;&#x79CD;</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>returns:</b> (progress:number) =&gt; Color</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
