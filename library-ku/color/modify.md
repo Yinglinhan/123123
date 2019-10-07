@@ -226,21 +226,157 @@ blend(1)   /
   </tbody>
 </table>
 
+Color.**lighten**\(color, amount\): Color
 
+给颜色添加白色返回一个更亮的颜色
 
+```jsx
+const blue = Color("#0099FF")
+const lightblue = Color.lighten(blue, 20)
+```
 
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">
+        <p>color: Color</p>
+        <p>&#x8981;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x7684;&#x989C;&#x8272;&#x5BF9;&#x8C61;</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p><b>amount: </b>number</p>
+        <p>&#x8C03;&#x6574;&#x6570;&#x503C;&#xFF0C;&#x4ECE;0-100&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;10</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>returns:</b> Color</td>
+    </tr>
+  </tbody>
+</table>
 
+Color.**mix**\(from, toColor, { model }\): \(p:number\) =&gt; string
 
+返回一个函数可以混合两个颜色，然后输出一个字符串类型的RGB颜色格式的值
 
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">
+        <p><b>from:</b> Color</p>
+        <p>&#x5F00;&#x59CB;&#x7684;&#x989C;&#x8272;</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p><b>toColor:</b> Color</p>
+        <p>&#x7ED3;&#x675F;&#x7684;&#x989C;&#x8272;</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p><b>{ model }: </b>{ model?: ColorMixModelType | undefined; }</p>
+        <p>&#x53EF;&#x9009;&#x7684;&#x989C;&#x8272;&#x6A21;&#x5F0F;&#x5BF9;&#x8C61;&#x53C2;&#x6570;</p>
+        <p><b><code>model</code></b>: &#x989C;&#x8272;&#x6A21;&#x5F0F;&#x5BF9;&#x8C61;&#x7684;&#x5176;&#x4E2D;&#x4E00;&#x79CD;</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>returns:</b> (p: number) =&gt; string</td>
+    </tr>
+  </tbody>
+</table>
 
+Color.**multiplyAlpha**\(color, alphaValue\): Color
 
+改变颜色的透明度，把原透明度乘以传入alphaValue
 
+```jsx
+const blue = Color("#0099FF")
+const transparent = Color.multiplyAlpha(blue, 0.5)
+```
 
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">
+        <p>color: Color</p>
+        <p>&#x9700;&#x8981;&#x8FDB;&#x884C;&#x8C03;&#x6574;&#x7684;&#x989C;&#x8272;</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p><b>alphaValue:</b> number</p>
+        <p>&#x4E00;&#x4E2A;0-1&#x8303;&#x56F4;&#x5185;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;1</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>returns:</b> Color</td>
+    </tr>
+  </tbody>
+</table>
 
+Color.**saturate**\(color, amount\): Color
 
+增加一个颜色的饱和度
 
+```jsx
+const blue = Color("#0099FF")
+const saturated = Color.saturate(blue, 100)
+```
 
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">
+        <p>color: Color</p>
+        <p>&#x8981;&#x8FDB;&#x884C;&#x8C03;&#x6574;&#x7684;&#x989C;&#x8272;</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p><b>amount:</b> number</p>
+        <p>0-100&#x8303;&#x56F4;&#x5185;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;10</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>returns:</b> Color</td>
+    </tr>
+  </tbody>
+</table>
 
+Color.**transparent**\(color\): Color
+
+把颜色的opacity的值设为0
+
+```jsx
+const blue = Color("#0099FF")
+
+const transparent = Color.alpha(blue)
+```
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">
+        <p>color: Color</p>
+        <p>&#x8981;&#x88AB;&#x8C03;&#x6574;&#x7684;&#x989C;&#x8272;</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">returns: Color</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
