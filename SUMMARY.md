@@ -98,7 +98,7 @@
   * [Number](framer-x/propertycontrols/number.md)
   * [SegmentedEnum](framer-x/propertycontrols/segmentedenum.md)
   * [String](framer-x/propertycontrols/string.md)
-* [RenderTarget](framer-x/rendertarget/README.md)
+* [Render Target](framer-x/rendertarget/README.md)
   * [Properties](framer-x/rendertarget/properties.md)
   * [Functions](framer-x/rendertarget/functions.md)
 
