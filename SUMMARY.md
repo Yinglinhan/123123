@@ -86,6 +86,7 @@
   * [Layout](framer-x/canvascomponents/layout.md)
   * [Colors](framer-x/canvascomponents/colors.md)
 * [PropertyControls](framer-x/propertycontrols/README.md)
+  * [Adding Controls](framer-x/propertycontrols/adding-controls.md)
   * [Hiding Controls](framer-x/propertycontrols/hiding-controls.md)
   * [Array](framer-x/propertycontrols/array.md)
   * [Boolean](framer-x/propertycontrols/boolean.md)
