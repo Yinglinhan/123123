@@ -38,3 +38,5 @@ import { Frame, Scroll, useCycle } from "framer"
 
 
 
+{% embed url="https://youtu.be/YSLU5KCiZWE" %}
+
