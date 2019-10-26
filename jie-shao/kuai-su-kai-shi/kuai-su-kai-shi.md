@@ -36,7 +36,5 @@ import { Frame, Scroll, useCycle } from "framer"
 
  - 如何查错
 
-{% embed url="https://youtu.be/YSLU5KCiZWE" %}
-
 
 
